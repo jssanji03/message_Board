@@ -102,37 +102,6 @@ function detail() {
                 const currentTarget = e.target.dataset.message
                 const currentData = data[currentTarget]
                 localStorage.setItem('testObject', JSON.stringify(currentData));
-                console.log(currentData);
-                let template = `
-                <div class="box">
-                    <div class="card">
-                        <img src="${currentData.img}">
-                        <div class="card-body">
-                            <h5 class="card-title">${currentData.id}${currentData.name}</h5>
-                            <p class="card-text">${currentData.comments}</p>
-                        </div>
-                        <div class="card-footer text-muted p-0">
-                            <div class="btn-group" role="group">
-                                <a>
-                                    <i class="fas fa-clock mr-1"></i><span>${currentData.time}</span>
-                                </a>
-                                <a class="js-comment" data-message="${currentData.id}" href="#">
-                                    <i class="fas fa-comment mr-1"></i>Comment
-                                </a>
-                                <a class="">
-                                    <label class="toggle-love">
-                                    <input type="checkbox">
-                                    <div class="icon">
-                                        <i class="far fa-heart"></i>
-                                    </div>Like
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `
-                // messageItem.innerHTML += template
-                // console.log(messageItem);
             })
         })
 }

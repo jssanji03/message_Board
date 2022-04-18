@@ -1,0 +1,26 @@
+
+@mixin button($background-color:#ccc,$fontColor:#fff,$hover-color:#ccc,$hover-fontColor:#fff) {
+    height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin:0px 5px;
+    background-color: $background-color;
+    color: $fontColor;
+     &:hover{
+    background-color: $hover-color;
+    color: $hover-fontColor;
+    font-size: 14px;
+    font-weight: 400;
+    }
+    &:focus{
+    font-size: 14px;
+    font-weight: 400;
+    }
+}
+// 送出  //
+.jess-btn-submit{
+    @include button($background-color:rgb(40, 40, 40),$fontColor: #fff,$hover-color:orangered,$hover-fontColor:#fff)
+}
+
+

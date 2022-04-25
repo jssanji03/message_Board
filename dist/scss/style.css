@@ -1,7 +1,11 @@
 /* Plugins Master Stylesheet */
+@import url("../../dist/css/adminlte.min.css");
 @import url("../../plugins/bootstrap/dist/css/bootstrap.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
-@import url("../../dist/css/adminlte.min.css");
+@import url("../../plugins/fullcalendar/main.min.css");
+@import url("../../plugins/fullcalendar-scheduler/main.min.css");
+@import url("../../plugins/select2/css/select2.min.css");
+@import url("../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css");
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
@@ -103,289 +107,20 @@ ul li {
   list-style: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.fc-scrollgrid-sync-table a {
+  color: #000;
 }
 
-.waterfall {
-  width: 100%;
-}
-
-.waterfall::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.waterfall .box {
-  border: none;
-  overflow: hidden;
-  border-radius: 10px;
-  float: left;
-  width: 250px;
-  margin-bottom: 10px;
-}
-
-.waterfall .box img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-}
-
-.waterfall .box .card-body .card-title {
-  color: orangered;
-  line-height: 30px;
-}
-
-.waterfall .box .card-body .card-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-.waterfall .box .card-footer .btn-group {
-  width: 100%;
-  overflow: hidden;
-}
-
-.waterfall .box .card-footer .btn-group a {
+.fc-scrollgrid-sync-table .fc-datagrid-cell:nth-child(2) .fc-datagrid-cell-main {
   font-size: 12px;
-  background-color: #363636;
-  line-height: 35px;
-  color: #FFF;
-  width: 100%;
-  text-align: center;
-  border-right: 1px solid #ccc;
-  cursor: pointer;
 }
 
-.waterfall .box .card-footer .btn-group a:first-child {
-  border-radius: 0px 0px 0px 6px;
+.fc-scrollgrid-sync-table .fc-datagrid-cell:first-child {
+  background-color: #f3f5f6;
 }
 
-.waterfall .box .card-footer .btn-group a:last-child {
-  border-radius: 0px 0px 6px 0px;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love .icon {
-  font-size: 12px;
-  min-height: 12px;
-  min-width: 12px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  position: absolute;
-  top: 0%;
-  left: 20%;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love .icon:hover {
-  color: #fff;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love input[type="checkbox"] {
-  display: none;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love input[type="checkbox"]:checked ~ .icon::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 12px;
-  color: orangered;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  margin: auto;
-  border-radius: 50%;
-}
-
-.waterfall .box .card-footer .btn-group a .toggle-love input[type="checkbox"]:checked ~ .icon {
-  color: orangered;
-}
-
-.waterfall .box .card-footer .btn-group a:hover {
-  background-color: orangered;
-}
-
-.waterfall .box .card-footer .btn-group a:hover .icon {
-  color: #fff;
-}
-
-.waterfall .box .card-footer .btn-group a:hover input[type="checkbox"]:checked ~ .icon::after {
-  color: #fff;
-}
-
-.waterfall .box .card-footer .btn-group a:hover input[type="checkbox"]:checked ~ .icon {
-  color: #fff;
-}
-
-.detail {
-  width: 100%;
-}
-
-.detail .box {
-  border: none;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.detail .box img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-}
-
-.detail .box .card-body .card-title {
-  color: orangered;
-  line-height: 30px;
-}
-
-.detail .box .card-body .card-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-.detail .box .card-footer .btn-group {
-  width: 100%;
-  overflow: hidden;
-}
-
-.detail .box .card-footer .btn-group a {
-  font-size: 12px;
-  background-color: #363636;
-  line-height: 35px;
-  color: #FFF;
-  width: 100%;
-  text-align: center;
-  border-right: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.detail .box .card-footer .btn-group a:first-child {
-  border-radius: 0px 0px 0px 6px;
-}
-
-.detail .box .card-footer .btn-group a:last-child {
-  border-radius: 0px 0px 6px 0px;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love .icon {
-  font-size: 12px;
-  min-height: 12px;
-  min-width: 12px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  position: absolute;
-  top: 0%;
-  left: 20%;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love .icon:hover {
-  color: #fff;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love input[type="checkbox"] {
-  display: none;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love input[type="checkbox"]:checked ~ .icon::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 12px;
-  color: orangered;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  margin: auto;
-  border-radius: 50%;
-}
-
-.detail .box .card-footer .btn-group a .toggle-love input[type="checkbox"]:checked ~ .icon {
-  color: orangered;
-}
-
-.detail .box .card-footer .btn-group a:hover {
-  background-color: orangered;
-}
-
-.detail .box .card-footer .btn-group a:hover .icon {
-  color: #fff;
-}
-
-.detail .box .card-footer .btn-group a:hover input[type="checkbox"]:checked ~ .icon::after {
-  color: #fff;
-}
-
-.detail .box .card-footer .btn-group a:hover input[type="checkbox"]:checked ~ .icon {
-  color: #fff;
-}
-
-.detailComment {
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.detailComment .card-title {
-  font-weight: 700;
-}
-
-.detailComment .card-footer {
-  padding: 5px 10px;
-}
-
-.detailComment .comment-name {
-  color: orangered;
-}
-
-.detailComment .comment-time {
-  color: #737373;
-}
-
-.detailComment .comment-message {
-  font-size: 14px;
-}
-
-.detailComment .comment-notes .list-group {
-  height: 100%;
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-.detailComment .comment-notes .list-group li:nth-child(odd) {
-  background: #ececec;
+.fc-scrollgrid-sync-table .fc-datagrid-cell:nth-child(2) {
+  background-color: #fafafa;
+  color: #4a5761;
 }
 /*# sourceMappingURL=style.css.map */

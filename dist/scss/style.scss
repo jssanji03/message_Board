@@ -1,9 +1,13 @@
 /* Plugins Master Stylesheet */
+@import url('../../dist/css/adminlte.min.css');
 @import url('../../plugins/bootstrap/dist/css/bootstrap.css');
 // < !-- Font Awesome -->
 @import url('../../plugins/fontawesome-free/css/all.min.css');
-@import url('../../dist/css/adminlte.min.css');
-
+@import url('../../plugins/fullcalendar/main.min.css');
+@import url('../../plugins/fullcalendar-scheduler/main.min.css');
+// < !-- Select2 -->
+@import url('../../plugins/select2/css/select2.min.css');
+@import url('../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css');
 
 /* :: 1.0 Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
@@ -21,7 +25,6 @@
 //     component
 // *******************
 @import "component/button";
-
 // *******************
 //     base
 // *******************
@@ -30,4 +33,4 @@
 //     pages
 // *******************
 
-@import "pages/message";
+@import "pages/bookingRoom";

@@ -1,46 +1,59 @@
 const resourcesData = [
             {
-                id: '301 Room',
+                id: '301',
                 title: '301 Room',
                 content:"可容納8~10人",
                 image_url:"/dist/img/avatar.png",
                 eventColor: "#88c6d1",
-                eventTextColor: 'white',
+        eventTextColor: 'white',
+                
+                // children: [
+                //             {
+                //                 id: '301-1',
+                //                 title: 'Jacky',
+                //                 content:null,
+                //             },
+                //         ]
             },
             {
-                id: '303 Room',
+                id: '303',
                 title: '303 Room',
                 content:"可容納8~10人",
                 image_url:"/dist/img/avatar2.png",
                 eventColor: "#7fcaeb",
                 eventTextColor: 'white',
+                children:[]
             },
             {
-                id: '101 Room',
+                id: '101',
                 title: '101 Room',
                 content:"可容納12~16人",
                 image_url:"/dist/img/avatar3.png",
                 eventColor: "#FEA500",
                 eventTextColor: 'white',
+                children:[]
             },
             {
-                id: '306 Room',
+                id: '306',
                 title: '306 Room',
                 content:"可容納4~6人",
-                image_url:"/dist/img/avatar4.png",
+                image_url: "/dist/img/avatar4.png",
+                children:[]
             },
 ]
 const eventData =[
     {
-        resourceId: '301 Room', 
+        resourceId: '301',
+        userName:'Jacky',
         title  : 'event1',
-        start: '2022-04-21T12:30:00', 
-        end: '2022-04-21T12:30:00',
+        start: '2022-04-26T12:30:00', 
+        end: '2022-04-26T12:30:00',
     }, {
-        resourceId: '306 Room', 
+        resourceId: '301', 
+        userName:'Mary',
         title  : 'event2',
-        start:  '2022-04-21T09:30:00', 
-        end: '2022-04-21T11:30:00',
+        start:  '2022-04-26T09:30:00', 
+        end: '2022-04-26T11:30:00',
     }
 ]
 $(function(){
@@ -75,7 +88,7 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
             
         },
     },
-    // resourceGroupField: 'building',
+    // resourceGroupField: 'id',
     resourceAreaColumns: [
         {
             field: 'title',
@@ -96,37 +109,29 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
             //     arg.el.appendChild(mark);
             // }
         },
-        {
-            field: 'content',
-            headerContent: '說明'
-        }
+        // {
+        //     field: 'content',
+        //     headerContent: '說明'
+        // }
         
     ],
     resources: resourcesData,
     events: function(info, successCallback, failureCallback ) {
       successCallback(eventData);
     },
-    // resourceLabelDidMount: function (info) {
-    //     console.log(info);
-    //   var questionMark = document.createElement('span');
-    //   questionMark.innerText = ' (?) ';
+    resourceLabelDidMount: function (info) {
+      var questionMark = document.createElement('small');
+      questionMark.innerHTML = info.resource.extendedProps.content;
 
-    //   info.el.appendChild(questionMark);
-
-    //   var tooltip = new Tooltip(questionMark, {
-    //     title: info.resource.title + '!!!',
-    //     placement: 'top',
-    //     trigger: 'hover',
-    //     container: 'body'
-    //   });
-    // },
-
-    
+      info.el.querySelector('.fc-datagrid-cell-main')
+        .appendChild(questionMark);
+    }
 });
 
 function ShowCalendar() {
     calendar.render();
 }
+
 const bookingBtn = document.querySelector(".js-saveData")
 const formNewEvent = document.querySelector(".js-addForm")
 const bookingAllday = document.querySelector("#booking-allDay")
@@ -150,13 +155,29 @@ function addData(e) {
     const userName = document.querySelector("#booking-name")
     const bookingTitle = document.querySelector(".booking-title")
     const bookingRoom = document.querySelector("#booking-room")
-    
+    const resourceItem = {
+        title: userName.value,
+        content:null,
+    }
+    // const resourceItem = {}
+    // resourcesData.forEach((item, i) => {
+    //     if (bookingRoom.value == item.title) {
+    //         for (let itemId = 0; itemId < resourcesData[i].children.length; itemId++){
+    //             resourceItem.id = `${item.id}-${itemId+ 1}`
+    //             resourceItem.title = userName.value
+    //             resourceItem.content = null
+    //         }
+    //         resourcesData[i].children.push(resourceItem)
+    //     }
+    // })
     const event = {
         resourceId: bookingRoom.value, 
-        title  : bookingTitle.value,
+        userName:userName.value, 
+        title  : `${userName.value}預約 : ${bookingTitle.value}`,
         start:  bookingStartDate.value+bookingStartTime.value, 
         end: bookingEndDate.value+bookingEndTime.value,
     }
+    
     if (bookingAllday.checked == true) {
         event.allDay = true
     }
@@ -165,3 +186,4 @@ function addData(e) {
     calendar.refetchEvents();
     formNewEvent.reset()
 }
+

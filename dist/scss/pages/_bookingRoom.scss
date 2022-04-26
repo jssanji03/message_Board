@@ -1,11 +1,11 @@
 .fc-scrollgrid-sync-table{
-    // font-size: 14px;
     a{
         color: #000;
     }
-    .fc-datagrid-cell:nth-child(2){
-        .fc-datagrid-cell-main{
-            font-size: 12px;
+    .fc-datagrid-cell-main{
+        small{
+            color: rgb(42, 108, 188);
+            float: right;
         }
     }
     .fc-datagrid-cell:first-child{

@@ -111,8 +111,9 @@ ul li {
   color: #000;
 }
 
-.fc-scrollgrid-sync-table .fc-datagrid-cell:nth-child(2) .fc-datagrid-cell-main {
-  font-size: 12px;
+.fc-scrollgrid-sync-table .fc-datagrid-cell-main small {
+  color: #2a6cbc;
+  float: right;
 }
 
 .fc-scrollgrid-sync-table .fc-datagrid-cell:first-child {

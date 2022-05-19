@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alert</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../dist/scss/style.css">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light justify-content-between">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown">
+                    多國語系
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">中文</a></li>
+                    <li><a class="dropdown-item" href="#">英文</a></li>
+                    <li><a class="dropdown-item" href="#">日文</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Pages
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./message.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>美言籤</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./bookingRoom.html" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>會議室預約</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./alert.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>到期通知</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./file.html" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>檔案管理</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper p-1">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>到期通知</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                <li class="breadcrumb-item active">到期通知</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <span class="title">到期通知</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Booking content -->
+            <section class="content">
+                <div class="container-fluid mb-3" id="SearchBar">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header bg_primary" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    + 到期通知
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <form class="alertForm">
+                                    <div class="accordion-body">
+                                        <div class="row mb-3">
+                                            <label for="apply-name" class="col-sm-1 col-form-label text-center"><i class="fas fa-user"></i></label>
+                                            <div class="col-sm-11">
+                                                <input type="text" class="form-control form-control-sm apply-name"
+                                                    id="apply-name" placeholder="申請者">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="apply-title" class="col-sm-1 col-form-label text-center"><i
+                                                    class="fas fa-envelope-open-text"></i></label>
+                                            <div class="col-sm-11">
+                                                <input type="text" class="form-control form-control-sm"
+                                                    id="apply-title" placeholder="新增工作">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row mb-3">
+                                            <label for="alert-date" class="col-sm-1 col-form-label text-center">提醒</label>
+                                            <div class="col-sm-11">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <input class="form-control form-control-sm" id="alert-date" type="date">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select form-select-sm" id="alert-time">
+                                                            <option selected value="T09:00:00">09:00</option>
+                                                            <option value="T12:00:00">12:00</option>
+                                                            <option value="T17:00:00">17:00</option>
+                                                            <option value="T20:00:00">20:00</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input js-laterTime" type="checkbox" value="" id="laterTime">
+                                                            <label class="form-check-label js-later" for="laterTime"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2 js-alertCancel" hidden>
+                                                        <a class="text-danger text-end" role="button"><i class="fas fa-trash-alt"></i> 移除提醒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="booking-room" class="col-sm-1 col-form-label text-center">重複</label>
+                                            <div class="col-sm-11">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <input class="form-control form-control-sm" id="repeatNum" type="number">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select form-select-sm" id="repeatTime">
+                                                            <option selected value="天">天</option>
+                                                            <option value="週">週</option>
+                                                            <option value="月">月</option>
+                                                            <option value="年">年</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="booking-room" class="col-sm-1 col-form-label text-center p-0">到期日</label>
+                                            <div class="col-sm-11">
+                                                <div class="row">
+                                                    <div class="col-sm-6 mb-3">
+                                                        <input class="form-control form-control-sm" id="alert-EndDate" type="date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <button type="button" class="btn btn-primary js-saveData"><i
+                                                class="fas fa-save mr-2"></i>新增</button>
+                                        <!-- <input type="button" class="js-addToList-Btn btn jess-btn-add" value="新增"> -->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 呈現內容 -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Task</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="js-list">
+                                    <tr>
+                                        <td style="width: 10px">
+                                            <div class="form-check">
+                                                <input class="form-check-input js-checkEvent" type="checkbox">
+                                            </div>
+                                        </td>
+                                        <td>Update software</td>
+                                        <td class="text-end showAlert" >
+                                            <i class="fas fa-calendar mx-1"></i>明天
+                                            <i class="fas fa-redo mx-1"></i>
+                                            <span>・</span>
+                                            <i class="fas fa-bell mx-1"></i>今天
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <table class="table">
+                                            <tbody class
+                                            ="">
+                                                <tr data-widget="expandable-table" aria-expanded="false">
+                                                    <td>
+                                                        <i class="expandable-table-caret fas fa-caret-right fa-fw"></i>
+                                                        已完成
+                                                    </td>
+                                                </tr>
+                                                <tr class="expandable-body">
+                                                    <td>
+                                                        <table class="table mx-0">
+                                                            <tbody class="js-complatedList">
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.2.0
+            </div>
+            <strong>Copyright &copy; 2014-2021 <a>AdminLTE.io</a>.</strong> All rights reserved.
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="../plugins/moment/moment.js"></script>
+    <script src="../plugins/fullcalendar-scheduler/main.js"></script>
+    <!-- Select2 -->
+    <script src="../plugins/select2/js/select2.full.min.js"></script>
+    <!-- Select2 -->
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- custom -->
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/alert.js"></script>
+    <!-- Page specific script -->
+</body>
+
+</html>

@@ -1,6 +1,12 @@
 /* Plugins Master Stylesheet */
 @import url('../../dist/css/adminlte.min.css');
 @import url('../../plugins/bootstrap/dist/css/bootstrap.css');
+@import url('../../plugins/jquery-monthpicker/MonthPicker.min.css');
+@import url('../../plugins/jquery/jquery-ui.min.css');
+
+// < !-- DataTables -->
+@import url('../../plugins/DataTables-1.10.25/datatables.min.css');
+@import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
 // < !-- Font Awesome -->
 @import url('../../plugins/fontawesome-free/css/all.min.css');
 @import url('../../plugins/fullcalendar/main.min.css');
@@ -21,10 +27,15 @@
 // *******************
 @import "helpers/responsive";
 @import "helpers/all";
+@import "helpers/color";
+@import "helpers/spacing";
 // *******************
 //     component
 // *******************
 @import "component/button";
+@import "component/card";
+@import "component/monthpicker";
+@import "component/datatable";
 // *******************
 //     base
 // *******************
@@ -35,3 +46,5 @@
 
 @import "pages/message";
 @import "pages/bookingRoom";
+@import "pages/alert";
+@import "pages/index";

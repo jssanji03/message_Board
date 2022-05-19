@@ -1,0 +1,226 @@
+.wrapper{
+  background-color: #E9EEF2
+}
+.logo {
+  width: 200px;
+}
+
+.cardItem{
+  height:100%;
+  min-height: 380px;
+  box-shadow: 1px 1px 3px 1px rgba(197, 197, 197, 0.37);
+  border-radius: 5px;
+  &:hover {
+    border: 0px;
+    box-shadow: 1px 1px 20px 7px rgba(197, 197, 197, 0.336);
+  }
+  .card-footer{
+    min-height: 50px;
+    background-color: #fff;
+  }
+}
+
+.index-footer{
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+  color: #869099;
+  padding: 1rem;
+}
+.HomeBanner {
+  .carouselArea {
+    @media #{$breakpoint-md},
+    #{$breakpoint-xs} {
+      padding: 0px;
+    }
+  
+    .carousel-inner {
+      .carousel-item {
+        .photoLink {
+          .resImg {
+            background-size: contain;
+            -webkit-background-size: contain;
+            background: center center no-repeat;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 350px;
+  
+            @media #{$breakpoint-xl} {
+              height: 300px;
+              background: center center no-repeat;
+              background-size: 100% 300px;
+              -webkit-background-size: 100% 300px;
+            }
+  
+            @media #{$breakpoint-lg} {
+              // object-fit: fill;
+              // width: 100%;
+              height: 280px;
+              background: center center no-repeat;
+              background-size: 100% 280px;
+              -webkit-background-size: 100% 280px;
+            }
+  
+            @media #{$breakpoint-md} {
+              // width: 100%;
+              // object-fit: fill;
+              height: 250px;
+              background-size: 100% 250px;
+              -webkit-background-size: 100% 250px;
+            }
+  
+            @media #{$breakpoint-xs} {
+              height: 200px;
+              background-size: 100% 200px;
+              -webkit-background-size: 100% 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.announcement{
+  .card-footer{
+    background-color: #fff;
+  }
+}
+
+.linkList {
+  padding: 0px 5px;
+
+  li {
+    padding: 5px;
+  }
+}
+
+
+.marqueeBox {
+  padding: 0px;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #18a5a5;
+
+  .newsTitle {
+    display: inline-block;
+    position: relative;
+    background-color: #18a5a5;
+    border-radius: 8px 0px 0px 8px;
+
+    p {
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color: #FFF;
+      box-sizing: border-box;
+    }
+
+    span {
+      width: 0;
+      position: absolute;
+      right: -10px;
+      top: 10px;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #18a5a5;
+    }
+  }
+
+  .marquee-wrapper {
+    margin: 0;
+
+    ul {
+      height: 40px;
+      padding: 10px;
+      line-height: 40px;
+      position: relative;
+
+      @media #{$breakpoint-lg} {
+        height: 80px;
+      }
+
+      @media #{$breakpoint-md} {
+        height: 110px;
+      }
+
+      @media #{$breakpoint-sm} {
+        height: 110px;
+      }
+
+      @media #{$breakpoint-xs} {
+        height: 210px;
+      }
+
+      li {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        bottom: 50px;
+        padding: 5px;
+        // color: $text;
+        text-align: left;
+        line-height: 40px;
+        animation-name: marquee;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        font-size: 18px;
+
+        @media #{$breakpoint-lg,$breakpoint-md,$breakpoint-sm,$breakpoint-xs} {
+          padding: 0px 10px;
+        }
+
+        a {
+          color: $text;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    bottom: -50%;
+    opacity: 1;
+  }
+
+  10% {
+    bottom: -15%;
+  }
+
+  40% {
+    bottom: -15%;
+  }
+
+  60% {
+    top: -200%;
+  }
+
+  100% {
+    top: -200%;
+  }
+}
+
+
+.submit-Btn {
+  width: 60px;
+  height: 60px;
+  background-color: #b9c3d6;
+  color: #FFF;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 1px 2px 8px rgba(115, 124, 141, 0.514);
+  position: fixed;
+  right: 40px;
+  bottom: 80px;
+}
+
+.submit-Btn i {
+  font-size: 25px;
+}

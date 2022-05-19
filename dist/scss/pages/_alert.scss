@@ -1,0 +1,18 @@
+.js-list,.js-complatedList{
+    td{
+        vertical-align: middle;
+        &.showAlert{
+            font-size: 12px;
+            color: rgb(115, 115, 115) !important;
+            i{
+                color: rgb(59, 59, 59);
+                &.fa-redo{
+                    color: rgb(136, 186, 244);
+                }
+            }
+        }
+    }
+}
+.text-del{
+    text-decoration: line-through;
+}

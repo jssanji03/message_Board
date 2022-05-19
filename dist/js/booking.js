@@ -93,21 +93,6 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
         {
             field: 'title',
             headerContent: 'Room',
-            // cellDidMount:function (arg) {
-            //     // console.log(arg.el);
-            //     var extendedProps = arg.resource.extendedProps;
-            //     const img = arg.el.querySelector(".fc-datagrid-cell .fc-datagrid-cell-cushion")
-            //     let image_url = document.createElement('img')
-            //     image_url.setAttribute("src", extendedProps.image_url)
-            //     img.appendChild(image_url)
-            // },
-            // cellDidMount: function (arg) { 
-            //     const extendedProps = arg.resource.extendedProps;
-            //     console.log(extendedProps.content);
-            //     let mark = document.createElement('small');
-            //     mark.innerText = extendedProps.content;
-            //     arg.el.appendChild(mark);
-            // }
         },
         // {
         //     field: 'content',

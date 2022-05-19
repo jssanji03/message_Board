@@ -109,6 +109,7 @@
     "fullcalendar-scheduler": "^5.11.0",
     "icheck-bootstrap": "^3.0.1",
     "imagesloaded": "^5.0.0",
+    "infinite-scroll": "^4.0.1",
     "inputmask": "^5.0.7",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",

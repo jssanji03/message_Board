@@ -32,7 +32,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="#" class="brand-link">
+            <a href="./index.html" class="brand-link">
                 <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
@@ -70,9 +70,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="＃" class="nav-link">
+                                    <a href="./alert.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>003</p>
+                                        <p>到期通知</p>
                                     </a>
                                 </li>
                             </ul>
@@ -116,13 +116,85 @@
             <section class="content">
                 <div class="container-fluid">
                     <main>
-                        <div class="waterfall">
+                        <div class="waterfall row row-cols-1 row-cols-md-3 g-4">
                             
                         </div>
                     </main>
                 </div>
             </section>
+            <section>
+                <div class="loading">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+                <div class="page-load-status">
+                    <div class="loader-ellips infinite-scroll-request">
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                    </div>
+                    <p class="infinite-scroll-last">End of content</p>
+                    <p class="infinite-scroll-error">No more pages to load</p>
+                </div>
+            </section>
             <!-- /.content -->
+            <section>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="submit-Btn" data-bs-toggle="modal" data-bs-target="#addMessage"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </section>
+            <!-- Modal -->
+            <div class="modal fade" id="addMessage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">新增美言籤</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="js-addForm">
+                                <div class="row">
+                                    <div class="form-group mb-2 col-lg-3 col-md-6 col-12">
+                                        <label class="form-label">姓名</label>
+                                        <input class="form-control form-control-sm js-name" name="singleDate" type="text">
+                                    </div>
+                                    <div class="form-group mb-2 col-lg-3 col-md-6 col-12">
+                                        <label class="form-label">發布時間</label>
+                                        <input class="form-control form-control-sm js-date" name="singleDate" type="date">
+                                    </div>
+                                    <!--  內容  -->
+                                    <div class="form-group mb-2 col-lg-12">
+                                        <label class="col-12 form-label" for="fixedArea">內容</label>
+                                        <textarea class="form-control col-12 js-content" cols=10 rows="4" maxlength="700"></textarea>
+                                    </div>
+                                    <div class="form-group mb-2 col-md-6 col-12">
+                                        <label>圖片</label>
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" targetID="preview_img" onchange="readURL(this)">
+                                            <label class="input-group-text">上傳檔案</label>
+                                            <span class="input-group-text cancelPicture">刪除</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2 col-md-6 col-12">
+                                        <label>圖片預覽</label>
+                                        <div style="height: 100px" id="pdf-container">
+                                            <img id="preview_img" src="" style="height: 100px" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="button" class="js-addToList-Btn btn jess-btn-add" value="新增">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -146,6 +218,7 @@
     <!-- Plugins -->
     <script src="../plugins/masonry-layout/dist/masonry.pkgd.min.js"></script>
     <script src="../plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../plugins/infinite-scroll/dist/infinite-scroll.pkgd.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <!-- custom -->

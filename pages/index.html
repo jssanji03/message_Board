@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/scss/style.css">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-white navbar-light shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                        <img class="img-fluid" src="../public/img/Logo.png">
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./message.html">美言籤</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <!-- Right navbar links -->
+                        <!-- <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" data-toggle="dropdown" href="#">
+                                    <i class="far fa-bell"></i>
+                                    <span class="badge badge-warning navbar-badge">15</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                    <span class="dropdown-item dropdown-header">15 Notifications</span>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-envelope mr-2"></i> 4 new messages
+                                        <span class="float-right text-muted text-sm">3 mins</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-users mr-2"></i> 8 friend requests
+                                        <span class="float-right text-muted text-sm">12 hours</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="fas fa-file mr-2"></i> 3 new reports
+                                        <span class="float-right text-muted text-sm">2 days</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <main>
+            <section class="HomeBanner">
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <div class="carouselArea">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                    </div>
+                                    <div class="carousel-inner">
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 即時宣導 -->
+            <section class="Propaganda col-12 py-3">
+                <div class="container">
+                    <div class="row justify-content-center px-2">
+                        <div class="col-12 marqueeBox overflow-hidden d-flex">
+                            <div class="col-lg-2 col-3 newsTitle">
+                                <p class="white fz-20"><i class="fas fa-bell"></i> 即時宣導</p><span></span>
+                            </div>
+                            <div class="col-lg-10 col-9 marquee-wrapper marquee" id="marquee">
+                                <ul class="mx-auto marquee-canvas">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content Header (Page header) -->
+            <section class="py-3">
+                <div class="container">
+                    <div class="row">
+                        <section class="col-lg-6 col-12 announcement">
+                            <div class="card h-100 cardItem">
+                                <div class="card-body">
+                                    <h5 class="mb-3 lh-40 border-bottom primary text-center">公告</h5>
+                                    <ul class="lh-30">
+                                        <li class="row">
+                                            <div class="col-sm-9 col-12">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                            </div>
+                                            <div class="col-sm-3 col-12 text-sm-end text-center">
+                                                <span class="third">2021/08/19</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-sm-9 col-12">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                            </div>
+                                            <div class="col-sm-3 col-12 text-sm-end text-center">
+                                                <span class="third">2021/08/18</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-sm-9 col-12">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                            </div>
+                                            <div class="col-sm-3 col-12 text-sm-end text-center">
+                                                <span class="third">2021/08/18</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-sm-9 col-12">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                            </div>
+                                            <div class="col-sm-3 col-12 text-sm-end text-center">
+                                                <span class="third">2021/08/18</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-sm-9 col-12">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                            </div>
+                                            <div class="col-sm-3 col-12 text-sm-end text-center">
+                                                <span class="third">2021/08/18</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-0 text-center">
+                                    <a class="important btn-more" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">過往資訊 <i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-lg-6 col-12 message">
+                            <div class="card h-100 cardItem">
+                                <div class="card-body">
+                                    <h5 class="mb-3 lh-40 border-bottom primary text-center">美言籤</h5>
+                                    <ul class="lh-30 js-message">
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-0 text-center">
+                                    <a class="important btn-more" href="./message.html">查看更多 <i
+                                            class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </section>
+            
+                    </div>
+                </div>
+            </section>
+            <section class="py-3 bg-lightGray">
+                <div class="container">
+                    <div class="row">
+                        <section class="col-lg-6 col-12 leaveApplication">
+                            <div class="card h-100 cardItem">
+                                <div class="card-body">
+                                    <h5 class="fz-20 lh-40 border-bottom primary text-center">請假資訊</h5>
+                                    <table class="responsive nowrap datatable-RWD">
+                                        <thead>
+                                            <tr class="fz-15">
+                                                <th scope="col">人員</th>
+                                                <th scope="col">部門</th>
+                                                <th scope="col">代理人</th>
+                                                <th scope="col">假別</th>
+                                                <th scope="col">開始時間</th>
+                                                <th scope="col">結束時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="fz-13">
+                                                <td>Mark</td>
+                                                <td>TD</td>
+                                                <td>John Lin</td>
+                                                <td>特休</td>
+                                                <td>2021/09/02</td>
+                                                <td>2021/09/03</td>
+                                            </tr>
+                                            <tr class="fz-13">
+                                                <td>Mark</td>
+                                                <td>TD</td>
+                                                <td>John Lin</td>
+                                                <td>特休</td>
+                                                <td>2021/09/02</td>
+                                                <td>2021/09/03</td>
+                                            </tr>
+                                            <tr class="fz-13">
+                                                <td>Mark</td>
+                                                <td>TD</td>
+                                                <td>John Lin</td>
+                                                <td>特休</td>
+                                                <td>2021/09/02</td>
+                                                <td>2021/09/03</td>
+                                            </tr>
+                                            <tr class="fz-13">
+                                                <td>Mark</td>
+                                                <td>TD</td>
+                                                <td>John Lin</td>
+                                                <td>特休</td>
+                                                <td>2021/09/02</td>
+                                                <td>2021/09/03</td>
+                                            </tr>
+                                            <tr class="fz-13">
+                                                <td>Mark</td>
+                                                <td>TD</td>
+                                                <td>John Lin</td>
+                                                <td>特休</td>
+                                                <td>2021/09/02</td>
+                                                <td>2021/09/03</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer  border-0 text-center">
+                                    <a class="btn-more" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">查看更多 <i
+                                            class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-lg-6 col-12 LinkURL">
+                            <div class="card h-100 cardItem">
+                                <div class="card-body">
+                                    <h5 class="fz-20 lh-40 border-bottom primary text-center">系統連結</h5>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <ul class="linkList">
+                                                    <li>
+                                                        <button class="btn btn-menu">員工園地 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">文件檔案區 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">網頁信箱 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">SalesForce <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <ul class="linkList">
+                                                    <li>
+                                                        <button class="btn btn-menu">線上學習平台 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">追蹤管理系統 Redminenormal <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">匯率查詢系統 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-menu">退貨維護查詢 <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer border-0 text-center">
+                                    <a class="btn-more" href="./pages/sysForm.html">快速連結 <i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </section>
+            
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">過往資訊</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="lh-30 my-2 p-1">
+                                        <li class="d-flex justify-content-between">
+                                            <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                益公字第07003號_企業識別系統</a>
+                                            <span class="third">2021/08/19</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                益公字第07005號_企業識別系統</a>
+                                            <span class="third">2021/08/18</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <a href="#" target="_blank">(110) 益公字第07005號_ Lorem ipsum dolor sit.</a>
+                                            <span class="third">2021/08/17</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- /.content-wrapper -->
+        <footer class="index-footer container-fluid bg-dark d-flex">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.2.0
+            </div>
+            <strong>Copyright &copy; 2014-2021 <a>AdminLTE.io</a>.</strong> All rights reserved.
+        </footer>
+        <!-- Control Sidebar -->
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="../plugins/moment/moment.js"></script>
+    <script src="../plugins/fullcalendar-scheduler/main.js"></script>
+    <script src="../plugins/jquery-monthpicker/MonthPicker.min.js"></script>
+    <!-- Select2 -->
+    <script src="../plugins/select2/js/select2.full.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- custom -->
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/message.js"></script>
+    <script src="../dist/js/index.js"></script>
+    <!-- Page specific script -->
+</body>
+
+</html>

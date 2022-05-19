@@ -33,6 +33,7 @@ function display(currentData) {
                 `
 }
 display(currentData)
+console.log(currentData);
 
 submitMessage.addEventListener("click", () => {
     const msg = document.querySelector("#messageTextarea")

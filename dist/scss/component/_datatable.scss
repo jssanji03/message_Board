@@ -1,0 +1,75 @@
+// DataTable 基本樣式 //
+table.dataTable tbody th, 
+table.dataTable tbody td{
+    color: $text;
+    padding: 15px 0px;
+    // border: none;
+}
+table.dataTable{
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid rgb(204, 204, 204);
+    thead{
+      width: 100%;
+      tr{
+        color: $secondary;
+        font-size: 16px;
+        th{
+          border-bottom: 1px solid rgb(224, 224, 224);
+          font-weight: 500 ;
+          font-size: 14px;
+          text-align: center;
+          padding: 8px;
+          vertical-align: middle;
+          line-height: 20px;
+          white-space:nowrap
+            }
+        }
+       
+    }
+    tbody{
+        tr{
+            padding: 0px;
+            border: 1px solid rgba(134, 200, 238, 0.329);
+            .dateColor{
+                color: $secondary ;
+                font-weight: 300;
+            }
+            td{
+              vertical-align: middle;
+              outline: none;
+              padding: 8px;
+              white-space:nowrap;
+              text-align: center;
+          }
+          &:nth-child(odd){
+              background-color: rgb(234, 245, 252) !important;
+          }
+        }
+    }
+    tfoot{
+        tr{
+            border-top:1px solid $secondary ;
+            color: $text;
+        }
+    }
+    .assignActive{
+      background-color: $primary;
+      color: $white;
+      display: inline-block;
+      width: 120px;
+      height: 35px;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      padding: 5px;
+    }
+}
+
+.dataTables_wrapper{
+  margin-top: 10px;
+}
+// DataTable 基本樣式 End //
+
+
+

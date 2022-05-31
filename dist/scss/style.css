@@ -3,7 +3,6 @@
 @import url("../../plugins/bootstrap/dist/css/bootstrap.css");
 @import url("../../plugins/jquery-monthpicker/MonthPicker.min.css");
 @import url("../../plugins/jquery/jquery-ui.min.css");
-@import url("../../plugins/DataTables-1.10.25/datatables.min.css");
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
 @import url("../../plugins/fullcalendar/main.min.css");
@@ -89,20 +88,8 @@ table {
   background-color: #2c7edb;
 }
 
-.bg-blue30 {
-  background-color: #ebf8ff;
-}
-
 .white {
   color: #ffffff !important;
-}
-
-.bg_hover {
-  background-color: #62c9fc;
-}
-
-.pink {
-  color: #d31577;
 }
 
 .mt-15 {
@@ -637,6 +624,26 @@ ul li {
   list-style: none;
 }
 
+.folders .nav-link {
+  border-bottom: 1px solid #ccc;
+  color: #545454;
+  line-height: 30px;
+}
+
+.folders .nav-link .badge {
+  background-color: #FFCC01;
+}
+
+.folders .nav-link.active {
+  color: white;
+  background-color: #325eaf;
+}
+
+.folders .nav-link.active .badge {
+  background-color: white;
+  color: #325eaf;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -660,7 +667,7 @@ ul li {
 }
 
 .waterfall .box .card {
-  min-height: 370px;
+  min-height: 380px;
 }
 
 .waterfall .box img {

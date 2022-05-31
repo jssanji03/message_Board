@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Booking</title>
+    <title>Files</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -74,20 +74,20 @@
                                         <p>美言籤</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="./bookingRoom.html" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>會議室預約</p>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
-                                    <a href="./alert.html" class="nav-link active">
+                                    <a href="./alert.html" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>到期通知</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./file.html" class="nav-link ">
+                                    <a href="./file.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>檔案管理</p>
                                     </a>
@@ -108,12 +108,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Booking Room</h1>
+                            <h1>檔案管理</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                                <li class="breadcrumb-item active">到期通知</li>
+                                <li class="breadcrumb-item active">檔案管理</li>
                             </ol>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <span class="title">到期通知</span>
+                            <span class="title">檔案管理</span>
                         </div>
                     </div>
                 </div>
@@ -133,10 +133,9 @@
             <section class="content">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card folders">
                             <div class="card-header">
-                                <h3 class="card-title">Folders</h3>
-            
+                                <h3 class="card-title">檔案資料夾</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
@@ -144,35 +143,19 @@
                                 </div>
                             </div>
                             <div class="card-body p-0">
-                                <ul class="nav nav-pills flex-column">
-                                    <li class="nav-item active">
-                                        <a href="#" class="nav-link active">
-                                            <i class="fas fa-inbox"></i> Inbox
-                                            <span class="badge bg-primary float-right">12</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-envelope"></i> Sent
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-file-alt"></i> Drafts
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="fas fa-filter"></i> Junk
-                                            <span class="badge bg-warning float-right">65</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-trash-alt"></i> Trash
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="nav flex-column" id="v-pills-tab" role="tablist">
+                                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-01"
+                                        type="button" role="tab" >
+                                        <i class="fas fa-inbox"></i> Home
+                                    </a>
+                                    <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-02"
+                                        type="button" role="tab">
+                                        <i class="far fa-envelope"></i> Profile
+                                    </a>
+                                    <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-03"
+                                        type="button" role="tab">
+                                        <i class="fas fa-filter"></i> Settings</a>
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
@@ -182,341 +165,588 @@
                     <div class="col-md-9">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">Inbox</h3>
-            
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm">
-                                        <input type="text" class="form-control" placeholder="Search Mail">
-                                        <div class="input-group-append">
-                                            <div class="btn btn-primary">
-                                                <i class="fas fa-search"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3 class="card-title">My Files</h3>
                                 <!-- /.card-tools -->
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body p-0">
                                 <div class="mailbox-controls">
                                     <!-- Check all button -->
-                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i
-                                            class="far fa-square"></i>
-                                    </button>
                                     <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+                                        </button>
                                         <button type="button" class="btn btn-default btn-sm">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <i class="fas fa-reply"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <i class="fas fa-share"></i>
-                                        </button>
                                     </div>
-                                    <!-- /.btn-group -->
-                                    <button type="button" class="btn btn-default btn-sm">
-                                        <i class="fas fa-sync-alt"></i>
-                                    </button>
-                                    <div class="float-right">
-                                        1-50/200
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-chevron-right"></i>
-                                            </button>
-                                        </div>
-                                        <!-- /.btn-group -->
-                                    </div>
-                                    <!-- /.float-right -->
                                 </div>
-                                <div class="table-responsive mailbox-messages">
-                                    <table class="table table-hover table-striped">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check1">
-                                                        <label for="check1"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">5 mins ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check2">
-                                                        <label for="check2"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">28 mins ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check3">
-                                                        <label for="check3"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">11 hours ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check4">
-                                                        <label for="check4"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">15 hours ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check5">
-                                                        <label for="check5"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">Yesterday</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check6">
-                                                        <label for="check6"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">2 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check7">
-                                                        <label for="check7"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">2 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check8">
-                                                        <label for="check8"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">2 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check9">
-                                                        <label for="check9"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">2 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check10">
-                                                        <label for="check10"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">2 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check11">
-                                                        <label for="check11"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">4 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check12">
-                                                        <label for="check12"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">12 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check13">
-                                                        <label for="check13"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">12 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check14">
-                                                        <label for="check14"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">14 days ago</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="icheck-primary">
-                                                        <input type="checkbox" value="" id="check15">
-                                                        <label for="check15"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
-                                                </td>
-                                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
-                                                    this problem...
-                                                </td>
-                                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                                <td class="mailbox-date">15 days ago</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- /.table -->
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="mailbox-messages tab-pane fade show active" id="v-01" role="tabpanel">
+                                        <table class="table  table-hover js-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check1">
+                                                            <label for="check1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">5 mins ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check2">
+                                                            <label for="check2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">28 mins ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check3">
+                                                            <label for="check3"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">11 hours ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check4">
+                                                            <label for="check4"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">15 hours ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check5">
+                                                            <label for="check5"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">Yesterday</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check6">
+                                                            <label for="check6"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check7">
+                                                            <label for="check7"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check8">
+                                                            <label for="check8"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check9">
+                                                            <label for="check9"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check10">
+                                                            <label for="check10"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check11">
+                                                            <label for="check11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">4 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check12">
+                                                            <label for="check12"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">12 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check13">
+                                                            <label for="check13"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">12 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check14">
+                                                            <label for="check14"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">14 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check15">
+                                                            <label for="check15"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">15 days ago</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-02" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                        <table class="table table-striped table-hover js-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check6">
+                                                            <label for="check6"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check7">
+                                                            <label for="check7"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check8">
+                                                            <label for="check8"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check9">
+                                                            <label for="check9"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check10">
+                                                            <label for="check10"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check11">
+                                                            <label for="check11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">4 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check12">
+                                                            <label for="check12"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">12 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check13">
+                                                            <label for="check13"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">12 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check14">
+                                                            <label for="check14"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">14 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check15">
+                                                            <label for="check15"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">15 days ago</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-03" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                        <table class="table table-striped table-hover js-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check1">
+                                                            <label for="check1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">5 mins ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check2">
+                                                            <label for="check2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">28 mins ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check3">
+                                                            <label for="check3"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">11 hours ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check4">
+                                                            <label for="check4"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">15 hours ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check5">
+                                                            <label for="check5"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">Yesterday</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check6">
+                                                            <label for="check6"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">2 days ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="icheck-primary">
+                                                            <input type="checkbox" value="" id="check11">
+                                                            <label for="check11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a>
+                                                    </td>
+                                                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                                    <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to
+                                                        this problem...
+                                                    </td>
+                                                    <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                                    <td class="mailbox-date">4 days ago</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <!-- /.mail-box-messages -->
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer p-0">
-                                <div class="mailbox-controls">
-                                    <!-- Check all button -->
-                                    <button type="button" class="btn btn-default btn-sm checkbox-toggle">
-                                        <i class="far fa-square"></i>
-                                    </button>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <i class="far fa-trash-alt"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <i class="fas fa-reply"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-sm">
-                                            <i class="fas fa-share"></i>
-                                        </button>
-                                    </div>
-                                    <!-- /.btn-group -->
-                                    <button type="button" class="btn btn-default btn-sm">
-                                        <i class="fas fa-sync-alt"></i>
-                                    </button>
-                                    <div class="float-right">
-                                        1-50/200
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-default btn-sm">
-                                                <i class="fas fa-chevron-right"></i>
-                                            </button>
-                                        </div>
-                                        <!-- /.btn-group -->
-                                    </div>
-                                    <!-- /.float-right -->
-                                </div>
+                               
                             </div>
                         </div>
                         <!-- /.card -->
@@ -545,10 +775,16 @@
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 5 -->
-    <!-- <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>  -->
-    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
     <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../plugins/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <!-- DataTables  & Plugins -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <!-- <script src="../plugins/datatables/jquery.dataTables.min.js"></script> -->
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+
     <!-- fullCalendar 2.2.5 -->
     <script src="../plugins/moment/moment.js"></script>
     <script src="../plugins/fullcalendar-scheduler/main.js"></script>
@@ -558,6 +794,7 @@
     <script src="../dist/js/adminlte.min.js"></script>
     <!-- custom -->
     <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/file.js"></script>
     <!-- Page specific script -->
 </body>
 

@@ -1,5 +1,9 @@
 //## Datatable Responsive 套件 - Start ##//
-$('.datatable-RWD').DataTable({
+
+
+
+$(function () {
+    $('.datatable-RWD').DataTable({
         searching: false,
         "paging": false,
         "ordering": false,
@@ -25,3 +29,33 @@ $('.datatable-RWD').DataTable({
 $('.select2bs4').select2({
     theme: 'bootstrap4'
 })
+    $(".js-table").DataTable({
+        "responsive": false,
+        "lengthChange": false,
+        "autoWidth": false,
+        searching: false,
+        "ordering": false,
+        "info": false,
+        "language": {
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+        },
+        dom: "<'row'<'col-12'tl>>" +
+            "<'row'<'col-12 p-2 d-flex justify-content-center'p>>",
+    })
+
+
+        const pathname = window.location.pathname;
+        const pathArray = pathname.split('/');
+        $(".nav-sidebar li a").each(function () {
+            const navController = $(this).attr("data-controller");
+            if (navController && pathArray.indexOf(navController) >= 0) {
+                $(this).addClass("active");
+                $(this).parents('.nav-treeview').children('.nav-link').addClass("active")
+                $(this).parents('.nav-treeview').parent().addClass("menu-open")
+                $(this).parents('.menu-open').children('.nav-link').addClass("active")
+            }
+        });
+  });

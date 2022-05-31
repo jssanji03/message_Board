@@ -1,0 +1,18 @@
+.folders{
+    .nav-link{
+        border-bottom: 1px solid #ccc;
+        color: rgb(84, 84, 84);
+        line-height: 30px;
+        .badge {
+            background-color: $yellow;
+        }
+        &.active{
+            color: white;
+            background-color: $primary;
+            .badge{
+                background-color: white;
+                color: $primary;
+            }
+        }
+    }
+}

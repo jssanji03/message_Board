@@ -50,29 +50,8 @@ const data = [
     },
     {
         id: 7,
-        img:"https://picsum.photos/id/16/300/500",
+        img:"https://picsum.photos/id/26/300/500",
         name: "KK",
-        comments: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        time: "2022/04/15",
-    },
-    {
-        id: 8,
-        img:"https://picsum.photos/id/267/300/500",
-        name: "QQ",
-        comments: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        time: "2022/04/15",
-    },
-    {
-        id: 9,
-        img:"https://picsum.photos/id/30/300/500",
-        name: "LL",
-        comments: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        time: "2022/04/15",
-    },
-    {
-        id: 10,
-        img:"https://picsum.photos/id/46/300/500",
-        name: "JJ",
         comments: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         time: "2022/04/15",
     },
@@ -111,7 +90,7 @@ function init() {
             </div>
         </div>
         `
-        if (i >= 6) {
+        if (i >= 3) {
             return false
         } else {
             board.innerHTML += postElement;
@@ -119,7 +98,7 @@ function init() {
     })
     
 }
-init()
+// init()
 function template(item) {
     return   `
             <div class="card">
@@ -148,17 +127,6 @@ function template(item) {
             </div>
         `
 }
-// const msnry = new Masonry( board, {
-//     itemSelector: '.box',
-//     columnWidth: 250,
-//     gutter: 20,
-//     horizontalOrder: true,
-//     // percentPosition: true,
-//     // stagger: 30,
-//     // // nicer reveal transition
-//     // visibleStyle: { transform: 'translateY(0)', opacity: 1 },
-//     // hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
-// });
 
 
 
@@ -219,71 +187,32 @@ detail()
 //-------------------------------------//
 // init Infinte Scroll
 const loading = document.querySelector('.loading');
-var loopLength = 3; //Set loop length
-var initItemsLength = 6; //Set loop length
-
+let dataLength = data.length
+let initItemsLength = 3; //set initial items length.
 
 function showLoading() {
 	// show loading animation
-    for (i = 0; i < loopLength; i++) { 
-        loading.classList.add('show');
-        setTimeout(() => {
-            // remove loading animation after 1 second
-            loading.classList.remove('show');
-            setTimeout(() => {
-                // create new posts after a little while (wait for the loading to dissappear)
-                console.log("ajax request");
-                if (initItemsLength < data.length) {
-                        let div = document.createElement('div');
-                        div.classList.add("box")
-                        const items = template(data[initItemsLength])
-                        div.innerHTML = items
-                        board.appendChild(div);
-                        initItemsLength += 1;
-                } 
-                else {
-                    $(".page-load-status").fadeIn();
-                };
-                // data.forEach((item, i) => {
-                //     if (i == data.length - 1) {
-                //         console.log("stop");
-                //         return
-                //     } else {
-                //         let div = document.createElement('div');
-                //         div.classList.add("box")
-                //         const items = template(data[i])
-                //         div.innerHTML = items
-                //         board.appendChild(div);
-                //     }
-                   
-                // })
-            }, 300);
-        }, 1000);
-    }
+	loading.classList.add('show');
+	setTimeout(() => {
+		// remove loading animation after 1 second
+		loading.classList.remove('show');
+		setTimeout(() => {
+			// create new posts after a little while (wait for the loading to dissappear)
+            console.log("ajax request");
+            if (initItemsLength < dataLength) {
+                data.forEach((item, i) => {
+                    let div = document.createElement('div');
+                    div.classList.add("box")
+                    const items = template(data[i])
+                    div.innerHTML = items
+                    board.appendChild(div);
+                })
+            } 
+		}, 300);
+	}, 1000);
 }
+showLoading()
 //-------------------------------------//
-// const isloading  = false;
-// const nextpage = 1;
-// function load_more() {
-//     if ( isloading === false) {
-//         // var url = "api.php?type=loadmore&page=" + this.nextpage;
-//         //這邊url,我們拿來測試到時要接正式的資料
-//         const url = data;
-//         console.log(url);
-//         // isloading = true;    
-//         $.getJSON(url, function (data) {
-//             console.log(data);
-//             // if (data.html !== null && data.html.length > 0) {
-//             //     //這邊就是將資料撈取後放到哪個div 之下？？
-//             //     $('body').append(data.html);
-//             //     //針對每次scroll 會新增一個參數，讓頁面一直往下載入正確的內容
-//             //     nextpage++;
-//             // }
-//             // this.isloading = false;
-//         })
-           
-//       }
-// }
 
 
 //-------------------------------------//
@@ -307,22 +236,6 @@ const unsplashID = '9ad80b14098bcead9c7de952435e937cc3723ae61084ba8e729adb642daf
 // infScroll.on('load', function (event, body) {
 //     showLoading()
 // });
-
-// Scroll
-window.addEventListener('scroll', () => {
-	
-	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-	console.log('scroll', scrollTop + clientHeight, scrollHeight - 50);
-	console.log( scrollTop ,clientHeight, scrollHeight);
-	
-	if(scrollTop + clientHeight >= scrollHeight - 5) {
-		showLoading();
-	}
-});
-
-// if(Math.ceil($(window).scrollTop() + window.innerHeight) == $(document).height()) {
-//     showLoading()
-// }
 
 // load initial page
 // infScroll.loadNextPage();

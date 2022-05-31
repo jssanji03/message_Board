@@ -80,7 +80,6 @@ function ListTemplate(item) {
         todoList.insertBefore(tr, todoList.firstChild);
         bindTaskEvents(tr)
     }
-    
 }
 
 function addList() {

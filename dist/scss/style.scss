@@ -5,7 +5,7 @@
 @import url('../../plugins/jquery/jquery-ui.min.css');
 
 // < !-- DataTables -->
-@import url('../../plugins/DataTables-1.10.25/datatables.min.css');
+// @import url('../../plugins/DataTables-1.10.25/datatables.min.css');
 @import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
 // < !-- Font Awesome -->
 @import url('../../plugins/fontawesome-free/css/all.min.css');
@@ -44,6 +44,7 @@
 //     pages
 // *******************
 
+@import "pages/file";
 @import "pages/message";
 @import "pages/bookingRoom";
 @import "pages/alert";

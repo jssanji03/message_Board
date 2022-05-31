@@ -1,7 +1,7 @@
 
+# [ 美言籤]
 ![](https://github.com/jssanji03/message_Board/blob/main/message_demo1.png)
 
-# [ 美言籤]
 [線上Demo](https://jssanji03.github.io/message_Board/pages/message.html)
 
 留言板的畫面呈現，可以無限加載所有留言內容。
@@ -60,6 +60,38 @@
 ```
 ### js檔
 ```
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- custom -->
+<script src="../dist/js/component.js"></script>
+<script src="../dist/js/alert.js"></script>
+```
+### css檔
+```
+<!-- Theme style -->
+<link rel="stylesheet" type="text/css" href="../../dist/css/adminlte.min.css">
+<link rel="stylesheet" type="text/css" href="../../dist/scss/style.css">
+```
+
+# [檔案管理]
+![](https://github.com/jssanji03/message_Board/blob/main/file_demo1.png)
+[線上Demo](https://jssanji03.github.io/message_Board/pages/file.html)
+
+檔案分類排序，點選後顯示選取的所有資料。
+<img src="https://github.com/jssanji03/message_Board/blob/main/file_demo2.png">
+
+
+### Plug-in
+```
+"jquery": "^3.6.0",
+"bootstrap": "^5.1.3",
+"datatables.net": "^1.0.25",
+"moment": "^2.29.3",
+```
+### js檔
+```
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- custom -->

@@ -3,7 +3,7 @@
 
 
 $(function () {
-    $('.datatable-RWD').DataTable({
+$('.datatable-RWD').DataTable({
         searching: false,
         "paging": false,
         "ordering": false,
@@ -29,23 +29,22 @@ $(function () {
 $('.select2bs4').select2({
     theme: 'bootstrap4'
 })
-    $(".js-table").DataTable({
-        "responsive": false,
-        "lengthChange": false,
-        "autoWidth": false,
-        searching: false,
-        "ordering": false,
-        "info": false,
-        "language": {
-            "paginate": {
-                "previous": "上一頁",
-                "next":"下一頁"
-            },
+$(".js-table").DataTable({
+    "responsive": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    searching: false,
+    "ordering": false,
+    "info": false,
+    "language": {
+        "paginate": {
+            "previous": "上一頁",
+            "next":"下一頁"
         },
-        dom: "<'row'<'col-12'tl>>" +
-            "<'row'<'col-12 p-2 d-flex justify-content-center'p>>",
-    })
-
+    },
+    dom: "<'row'<'col-12'tl>>" +
+        "<'row'<'col-12 p-2 d-flex justify-content-center'p>>",
+})
 
         const pathname = window.location.pathname;
         const pathArray = pathname.split('/');

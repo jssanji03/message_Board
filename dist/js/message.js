@@ -207,11 +207,13 @@ function addNewList() {
 
 function detail() {
     const commentButton = document.querySelectorAll(".js-comment")
-        commentButton.forEach((x) => {
+    commentButton.forEach((x) => {
             x.addEventListener("click", (e) => {
                 const currentTarget = e.target.dataset.message
                 const currentData = data[currentTarget]
                 localStorage.setItem('testObject', JSON.stringify(currentData));
+                console.log(currentData);
+                // console.log(localStorage.setItem('testObject', JSON.stringify(currentData)));
             })
         })
 }
@@ -239,11 +241,13 @@ function showLoading() {
                         const items = template(data[initItemsLength])
                         div.innerHTML = items
                         board.appendChild(div);
-                        initItemsLength += 1;
+                    initItemsLength += 1;
+                    
                 } 
                 else {
                     $(".page-load-status").fadeIn();
                 };
+                detail()
                 // data.forEach((item, i) => {
                 //     if (i == data.length - 1) {
                 //         console.log("stop");
@@ -259,6 +263,7 @@ function showLoading() {
                 // })
             }, 300);
         }, 1000);
+        
     }
 }
 //-------------------------------------//
@@ -312,8 +317,8 @@ const unsplashID = '9ad80b14098bcead9c7de952435e937cc3723ae61084ba8e729adb642daf
 window.addEventListener('scroll', () => {
 	
 	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-	console.log('scroll', scrollTop + clientHeight, scrollHeight - 50);
-	console.log( scrollTop ,clientHeight, scrollHeight);
+	// console.log('scroll', scrollTop + clientHeight, scrollHeight - 50);
+	// console.log( scrollTop ,clientHeight, scrollHeight);
 	
 	if(scrollTop + clientHeight >= scrollHeight - 5) {
 		showLoading();

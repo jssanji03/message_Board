@@ -8,7 +8,7 @@ function display(currentData) {
                     <div class="card">
                         <img src="${currentData.img}">
                         <div class="card-body">
-                            <h5 class="card-title">${currentData.id}${currentData.name}</h5>
+                            <h5 class="card-title">${currentData.name}</h5>
                             <p class="card-text">${currentData.comments}</p>
                         </div>
                         <div class="card-footer text-muted p-0">

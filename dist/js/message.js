@@ -248,24 +248,26 @@ function showLoading() {
                     $(".page-load-status").fadeIn();
                 };
                 detail()
-                // data.forEach((item, i) => {
-                //     if (i == data.length - 1) {
-                //         console.log("stop");
-                //         return
-                //     } else {
-                //         let div = document.createElement('div');
-                //         div.classList.add("box")
-                //         const items = template(data[i])
-                //         div.innerHTML = items
-                //         board.appendChild(div);
-                //     }
-                   
-                // })
             }, 300);
         }, 1000);
         
     }
 }
+
+// Scroll
+window.addEventListener('scroll', () => {
+	
+	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+	// console.log('scroll', scrollTop + clientHeight, scrollHeight - 50);
+	// console.log( scrollTop ,clientHeight, scrollHeight);
+	
+	if(scrollTop + clientHeight >= scrollHeight - 5) {
+		showLoading();
+	}
+});
+
+
+
 //-------------------------------------//
 // const isloading  = false;
 // const nextpage = 1;
@@ -294,7 +296,7 @@ function showLoading() {
 //-------------------------------------//
 // init Infinte Scroll
 // Get an API key for your demos at https://unsplash.com/developers
-const unsplashID = '9ad80b14098bcead9c7de952435e937cc3723ae61084ba8e729adb642daf0251';
+// const unsplashID = '9ad80b14098bcead9c7de952435e937cc3723ae61084ba8e729adb642daf0251';
 
 
 // let infScroll = new InfiniteScroll( board, {
@@ -312,22 +314,3 @@ const unsplashID = '9ad80b14098bcead9c7de952435e937cc3723ae61084ba8e729adb642daf
 // infScroll.on('load', function (event, body) {
 //     showLoading()
 // });
-
-// Scroll
-window.addEventListener('scroll', () => {
-	
-	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-	// console.log('scroll', scrollTop + clientHeight, scrollHeight - 50);
-	// console.log( scrollTop ,clientHeight, scrollHeight);
-	
-	if(scrollTop + clientHeight >= scrollHeight - 5) {
-		showLoading();
-	}
-});
-
-// if(Math.ceil($(window).scrollTop() + window.innerHeight) == $(document).height()) {
-//     showLoading()
-// }
-
-// load initial page
-// infScroll.loadNextPage();
